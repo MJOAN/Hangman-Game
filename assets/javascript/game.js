@@ -30,7 +30,7 @@ var chooseWord = ["acoustics", "adiabatic", "albedo", "acceleration", "ampere",
             }
             // display "__" which are placeholders for hangmanword letters
             // SYNTAX ERROR LINE 40 not displaying "__" for placeHolderForWord array var
-            document.getElementById("hangman").innerHTML = placeHolderForWord[i];
+            document.getElementById("hangman").innerHTML = placeHolderForWord;
            
             // for loop through placeholder array length 
             for (var k = 0; k < placeHolderForWord.length; k++) {
@@ -91,35 +91,6 @@ var chooseWord = ["acoustics", "adiabatic", "albedo", "acceleration", "ampere",
         } // end hangmanGame
 
 
-
-
-
-    // MAIN PROCESS
-      // ==============================================================================
-
-      // Calling functions to start the game.
-        letterGuesses(); 
-        hangmanGame();
-
-      // When the user presses a key, it will run the following function...
-      // game starts when onkey up is triggered in HTML - NOT SURE WHERE TO END CURLY BRACE 
-      document.onkeyup = function(event) {
-
-            // Use key events to listen for the letters that your players will type
-            var userGuess = document.addEventListener("event");
-
-            // math random to pick word from hangmanword array 
-            var hangmanWord = chooseWord[Math.floor(Math.random() * chooseWord.length)];
-
-            // forloop to iterate into hangmanword length and output to inner HTML as hidden
-            for (var i = 0; i < hangmanWord.length; i++) {
-                placeHolderForWord[i] = "__";
-            }
-            // display "__" which are placeholders for hangmanword letters
-            // SYNTAX ERROR LINE 40 not displaying "__" for placeHolderForWord array var
-            document.getElementById("hangman").innerHTML = placeHolderForWord[i];
-
-
     // WIN LOSS RESET FUNCTIONS
       // ==============================================================================
 
@@ -148,5 +119,29 @@ var chooseWord = ["acoustics", "adiabatic", "albedo", "acceleration", "ampere",
             } // end winLoss function
 
 
+
+    // MAIN PROCESS
+      // ==============================================================================
+
+      // When the user presses a key, it will run the following function...
+      // game starts when onkey up is triggered in HTML - NOT SURE WHERE TO END CURLY BRACE 
+      document.onkeyup = function(event) {
+
+            // Use key events to listen for the letters that your players will type
+            var userGuess = document.addEventListener("hangman");
+
+            // math random to pick word from hangmanword array 
+            var hangmanWord = chooseWord[Math.floor(Math.random() * chooseWord.length)];
+
+            // forloop to iterate into hangmanword length and output to inner HTML as hidden
+            for (var i = 0; i < hangmanWord.length; i++) {
+                placeHolderForWord[i] = "__";
+            }
+            // display "__" which are placeholders for hangmanword letters
+            // SYNTAX ERROR LINE 40 not displaying "__" for placeHolderForWord array var
+            document.getElementById("hangman").innerHTML = placeHolderForWord[i];
+
+            letterGuesses();
+            hangmanGame();
 
     } // end function(event)

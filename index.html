@@ -15,11 +15,9 @@
                 <div class="col-md-offset-2 col-md-8">
                     <div class="jumbotron">
                         <h2>Press any key to start playing, "The Hangman Physics Challenge!"</h2>
-                     
-                        <p maxlength="1" minlength="1" id="event" onkeyup="startGame(); hangmanGame()"/>
           	            <br>
                         <br>
-                        <p id="hangman">Hangman Word: </p>
+                        <p id="hangman" onkeyup="startGame(); hangmanGame()">Hangman Word: </p>
                         <p id="message"> Message: </p>
                         <p id="userWin">Wins: </p>
                         <p id="userLoss">Losses: </p>
