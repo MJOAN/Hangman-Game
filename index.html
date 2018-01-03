@@ -13,16 +13,17 @@
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                     <div class="jumbotron">
-                        <h2>Press any key to start playing, "The Hangman Physics Challenge!"</h2>
+                        <h2>The Hangman Physics Challenge!</h2>
+                        <h5>Press any key to start playing!</h5>
           	            <br>
                         <br>
-                        <p id="hangman" onkeyup="hangmanGame();">Hangman Word: </p>
-                        <p id="message"> Message: </p>
-                        <p id="userWin">Wins: </p>
-                        <p id="userLoss">Losses: </p>
-                        <p id="guessesRemaining">Number of Guesses Remaining: </p>
-                        <p id="lettersAlreadyGuessed">Letters Already Guessed: </p>
-                        <button id="restart" type="button" onClick="resetGame()">Restart</button>
+                            <p id="hangman" onkeyup="function();">Hangman Word: </p>
+                            <p id="lettersGuessed">Letters Guessed: </p>
+                            <p id="message"> Message: </p>
+                            <p id="userWin">Wins: </p>
+                            <p id="userLoss">Losses: </p>
+                            <p id="letterCount">Number of Guesses: </p>
+                        <button id="restart" type="button" onclick="resetGame();">Restart</button>
                     </div>
                 </div>
             </div>

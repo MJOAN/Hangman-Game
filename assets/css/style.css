@@ -1,1 +1,11 @@
-placeholder 
+.hangman
+{
+    font-family: "Segoe UI", Arial, Sans-serif;
+    font-size: 14px;
+    padding: 5px;
+}
+.hangman:hover
+{
+    background-color: #eee;
+    cursor: pointer;
+} 
